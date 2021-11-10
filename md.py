@@ -21,7 +21,7 @@ def calcenergy(atoms):
     epot = atoms.get_potential_energy() / len(atoms)
     ekin = atoms.get_kinetic_energy() / len(atoms)
     Tinst = ekin / (1.5 * units.kB)
-    #etot = epot + ekin
+    etot = epot + ekin
     return (epot, ekin, Tinst, etot)
 
 def run_md():

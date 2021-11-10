@@ -19,7 +19,7 @@ else:
 def calcenergy(atoms):
     """Calculate the potential, kinetic and total energy per atom."""
     epot = atoms.get_potential_energy() / len(atoms)
-    #ekin = atoms.get_kinetic_energy() / len(atoms)
+    ekin = atoms.get_kinetic_energy() / len(atoms)
     Tinst = ekin / (1.5 * units.kB)
     etot = epot + ekin
     return (epot, ekin, Tinst, etot)
